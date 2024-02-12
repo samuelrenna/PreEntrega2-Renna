@@ -1,0 +1,15 @@
+.navbar-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.navbar-btn:hover {
+    color: blue;
+}
+
+.icon-lg {
+    font-size: 2rem; /* Tamaño del icono */
+    margin-right: 0.5rem; /* Espacio entre el icono y el borde del botón */
+}
