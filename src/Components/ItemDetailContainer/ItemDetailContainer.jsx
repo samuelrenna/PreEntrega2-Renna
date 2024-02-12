@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
 
-    const { itemId } = useParams(); // Corregir la desestructuración
+    const { itemId } = useParams();
 
     useEffect(() => {
         getProductsById(itemId)
