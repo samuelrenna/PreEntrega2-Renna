@@ -24,7 +24,7 @@ const asyncMock = [
     id: 3,
     name: "Xbox Consola 3",
     categoryUno: "Xbox",
-    categoryDos: "Consola",
+    categoryDos: "Consolas",
     img: "imagen3.jpg",
     stock: 5,
     description: "Descripción del producto 3",
@@ -55,7 +55,7 @@ const asyncMock = [
     id: 6,
     name: "PlayStation Consola 1",
     categoryUno: "PlayStation",
-    categoryDos: "Consola",
+    categoryDos: "Consolas",
     img: "imagen6.jpg",
     stock: 12,
     description: "Descripción del producto 6",
@@ -76,7 +76,7 @@ const asyncMock = [
     id: 8,
     name: "Nintendo Consola 1",
     categoryUno: "Nintendo",
-    categoryDos: "Consola",
+    categoryDos: "Consolas",
     img: "imagen8.jpg",
     stock: 10,
     description: "Descripción del producto 8",
@@ -111,3 +111,13 @@ export const getProductsById = (productId) => {
         }, 1000);
     });
 }
+export const getProductsByCategory = (category) => {
+        return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const filteredProducts = asyncMock.filter(product => {
+            return product.categoryUno === category || product.categoryDos === category;
+            });
+            resolve(filteredProducts);
+        }, 1000);
+        });
+    };
