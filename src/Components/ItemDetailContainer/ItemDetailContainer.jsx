@@ -6,10 +6,10 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
 
-    const { ItemId } = useParams()
+    const { itemId } = useParams(); // Corregir la desestructuración
 
     useEffect(() => {
-        getProductsById(ItemId)
+        getProductsById(itemId)
             .then(response => {
                 console.log(response);
                 setProduct(response);
@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
             .catch(error => {
                 console.log(error);
             });
-    }, [ItemId]);
+    }, [itemId]);
 
     return (
         <div>
