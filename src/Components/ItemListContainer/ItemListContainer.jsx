@@ -16,17 +16,17 @@ const ItemListContainer = ({ greeting }) => {
             try {
                 let response;
                 if (pathname === '/' || !categoryId) {
-                    console.log('Fetching all products...');
+                    console.log('Buscando productos...');
                     response = await getProducts();
-                    console.log('Products fetched:', response);
+                    console.log('productos encontrados:', response);
                 } else {
-                    console.log(`Fetching products for category ${categoryId}...`);
+                    console.log(`buscando productos por categoria ${categoryId}...`);
                     response = await getProductsByCategory(categoryId);
-                    console.log(`Products for category ${categoryId} fetched:`, response);
+                    console.log(`Productos de la categoria ${categoryId} obtenidos:`, response);
                 }
                 setProducts(response);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Error:', error);
             }
         };
     
