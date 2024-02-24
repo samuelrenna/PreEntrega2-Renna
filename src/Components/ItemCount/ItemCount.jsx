@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-const ItemCount = ({ stock,onAdd }) => {
-
+const ItemCount = ({ stock, onAdd }) => {
     const [count, setCount] = useState(1);
 
-    useEffect (()=> {
+    useEffect(() => {
         if (stock === 0) {
             setCount(0);
-        }
-        else {
+        } else {
             setCount(1);
         }
     }, [stock]);
 
     const sumar = () => {
-        if (count < stock ) {
-            setCount (count + 1);
+        if (count < stock) {
+            setCount(count + 1);
         }
     };
 
@@ -29,18 +27,21 @@ const ItemCount = ({ stock,onAdd }) => {
         if (onAdd) {
             onAdd(count);
         }
-    }
+    };
 
-return (
-    <div>
-        <button onClick={sumar} disabled={stock === 0 || count === stock }> + </button>
-        <h2>{count}</h2>
-        <button onClick={restar} disabled={stock === 0 || count === 1 }> - </button>
+    return (
         <div>
-            <button onClick={AgregarAlCarrito}disabled={stock === 0}>Agregar al Carrito</button>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' ,margin : '1vw' }}>
+            <button onClick={restar} disabled={stock === 0 || count === 1}>-</button>
+            <h2 style={{ margin: '0 20px' }}>{count}</h2>
+            <button onClick={sumar} disabled={stock === 0 || count === stock}>+</button>
+            
         </div>
-    </div>
-);
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <button onClick={AgregarAlCarrito} disabled={stock === 0}>Agregar al Carrito</button>
+            </div>
+        </div>
+    );
 };
 
 export default ItemCount;

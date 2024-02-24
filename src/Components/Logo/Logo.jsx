@@ -1,10 +1,11 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import './Logo.css';
+import logoImg from '../../../img/VersusGaming.png'
 
 const Logo = () => {
   return (
     <div>
-      <p>LOGo</p>
+      <img src={logoImg} className="logo" alt="Logo Versus Gaming" />
     </div>
   );
 };

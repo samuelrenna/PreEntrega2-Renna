@@ -34,7 +34,7 @@ const asyncMock = [
     {
     id: 4,
     name: "PlayStyation Juego 1",
-    categoryUno: "playStation",
+    categoryUno: "playstation",
     categoryDos: "juegos",
     img: "https://http2.mlstatic.com/D_NQ_NP_608578-MLA54959073599_042023-O.webp",
     stock: 20,
@@ -44,7 +44,7 @@ const asyncMock = [
     {
     id: 5,
     name: "PlayStation Accesorio 1",
-    categoryUno: "playStation",
+    categoryUno: "playstation",
     categoryDos: "accesorios",
     img: "https://http2.mlstatic.com/D_NQ_NP_660158-MLA52349237473_112022-O.webpimagen5.jpg",
     stock: 8,
@@ -54,7 +54,7 @@ const asyncMock = [
     {
     id: 6,
     name: "PlayStation Consola 1",
-    categoryUno: "playStation",
+    categoryUno: "playstation",
     categoryDos: "consolas",
     img: "https://http2.mlstatic.com/D_NQ_NP_786208-MLU74159511773_012024-O.webp",
     stock: 12,

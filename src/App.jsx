@@ -4,6 +4,7 @@ import NavBar from './Components/Navbar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from "./Components/footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/nintendo/:categoryId' element={<ItemListContainer greeting={"NINTENDO"}/>} />
           <Route path='/item/:itemId' element={<ItemDetailContainer />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
