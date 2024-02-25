@@ -1,15 +1,29 @@
-.navbar-btn {
+.cart-container {
+    position: relative; /* Establece la posición relativa */
+    display: inline-block; /* Asegura que el contenedor tenga solo el ancho del contenido */
+}
+
+.cart-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     transition: color 0.5s ease;
+    position: relative; /* Establece la posición relativa para el botón */
 }
 
-.navbar-btn:hover {
+.cart-button:hover {
     color: blue;
 }
 
 .icon-lg {
-    font-size: 2rem; /* Tamaño del icono */
+    font-size: 3rem; /* Aumenta el tamaño del icono */
     margin-right: 0.5rem; /* Espacio entre el icono y el borde del botón */
 }
+
+.cart-count {
+    position: absolute; /* Establece la posición absoluta */
+    top: 50%; /* Coloca el elemento en el centro verticalmente */
+    left: 50%; /* Coloca el elemento en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el contenido exactamente en el centro */
+}
+

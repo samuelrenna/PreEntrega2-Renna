@@ -34,9 +34,10 @@ function NavBar() {
                             <NavDropdown.Item as={NavLink} to="/nintendo/accesorios" activeclassname="active">Accesorios</NavDropdown.Item>
                         </NavDropdown>
 
-                        <NavLink className="nav-link" to="/"> <CartWidget /> </NavLink>
+                        
                     </Nav>
                 </Navbar.Collapse>
+                <NavLink className="nav-link" to="/"> <CartWidget /> </NavLink>
             </Container>
         </Navbar>
     );
