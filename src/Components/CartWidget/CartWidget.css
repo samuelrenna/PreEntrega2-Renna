@@ -24,6 +24,6 @@
     position: absolute; /* Establece la posición absoluta */
     top: 50%; /* Coloca el elemento en el centro verticalmente */
     left: 50%; /* Coloca el elemento en el centro horizontalmente */
-    transform: translate(-50%, -50%); /* Centra el contenido exactamente en el centro */
+    transform: translate(-45%, -50%); /* Centra el contenido exactamente en el centro */
 }
 

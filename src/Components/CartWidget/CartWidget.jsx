@@ -6,7 +6,7 @@ const CartWidget = () => {
         <div className="cart-container">
             <button className="btn navbar-btn cart-button">
                 <i className="bi bi-cart icon-lg"></i>
-                <p className="cart-count">99+</p>
+                <p className="cart-count"style={{ fontSize: '0.75rem',}}>99+</p>
             </button>
         </div>
     );
