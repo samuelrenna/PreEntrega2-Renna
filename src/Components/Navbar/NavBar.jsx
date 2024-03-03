@@ -17,30 +17,15 @@ function NavBar() {
                         <NavLink className="nav-link" activeclassname="active" exact="true" to="/">Home</NavLink>
 
                         <NavLink className="nav-link" activeclassname="active" exact="true" to="/xbox">Xbox</NavLink>
-                        {/*<NavDropdown title="Xbox">
-                            <NavDropdown.Item as={NavLink} to="/xbox/consolas" activeclassname="active">Consolas</NavDropdown.Item>
-                            <NavDropdown.Item as={NavLink} to="/xbox/juegos" activeclassname="active">Juegos</NavDropdown.Item>
-                            <NavDropdown.Item as={NavLink} to="/xbox/accesorios" activeclassname="active">Accesorios</NavDropdown.Item>
-                        </NavDropdown>*/}
 
                         <NavLink className="nav-link" activeclassname="active" exact="true" to="/playstation">PlayStation</NavLink>
-                        {/*<NavDropdown title="PlayStation">
-                            <NavDropdown.Item as={NavLink} to="/playstation/consolas" activeclassname="active">Consolas</NavDropdown.Item>
-                            <NavDropdown.Item as={NavLink} to="/playstation/juegos" activeclassname="active">Juegos</NavDropdown.Item>
-                            <NavDropdown.Item as={NavLink} to="/playstation/accesorios" activeclassname="active">Accesorios</NavDropdown.Item>
-                        </NavDropdown>*/}
 
                         <NavLink className="nav-link" activeclassname="active" exact="true" to="/nintendo">Nintendo</NavLink>
-                        {/*<NavDropdown title="Nintendo">
-                            <NavDropdown.Item as={NavLink} to="/nintendo/consolas" activeclassname="active">Consolas</NavDropdown.Item>
-                            <NavDropdown.Item as={NavLink} to="/nintendo/juegos" activeclassname="active">Juegos</NavDropdown.Item>
-                            <NavDropdown.Item as={NavLink} to="/nintendo/accesorios" activeclassname="active">Accesorios</NavDropdown.Item>
-                    </NavDropdown>*/}
-
-                        
                     </Nav>
                 </Navbar.Collapse>
-                <NavLink className="nav-link" to="/"> <CartWidget /> </NavLink>
+
+                <NavLink className="nav-link" to="/cart"> <CartWidget /> </NavLink>
+
             </Container>
         </Navbar>
     );

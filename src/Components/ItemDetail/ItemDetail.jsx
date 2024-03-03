@@ -1,15 +1,25 @@
-import React, { useState } from 'react'; 
+import React, { useContext, useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
+import { cartContext } from '../../context/CartContext';
 
 
-const ItemDetail = ({ name, img, categoryUno, categoryDos, description, price, stock }) => {
-    // Declara un componente funcional ItemDetail que recibe propiedades (name, img, categoryUno, categoryDos, description, price, stock).
+const ItemDetail = ({ id, name, img, categoryUno, categoryDos, description, price, stock }) => {
+
     const [quantityAdded, setQuantityAdded] = useState(0); // Declara el estado quantityAdded y la función setQuantityAdded usando el hook useState, inicializado en 0.
 
-    const handleOnAdd = (quantity) => {
+    const { addItem } = useContext(cartContext)
+
+        const handleOnAdd = (quantity) => {
         // Declara la función handleOnAdd que toma la cantidad como argumento.
         setQuantityAdded(quantity); // Actualiza el estado quantityAdded con la cantidad proporcionada.
+
+        const item = {
+            id: id,
+            name: name,
+            price: price
+        }
+        addItem(item, quantity)
     };
 
     return (

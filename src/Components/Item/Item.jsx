@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'; // Importa NavLink desde react-router-dom
-import ItemCount from '../ItemCount/ItemCount';
+
 
 const Item = ({ id, name, img, price, stock, categoryUno, categoryDos }) => {
     return (
@@ -16,8 +16,12 @@ const Item = ({ id, name, img, price, stock, categoryUno, categoryDos }) => {
                         <li className="list-group-item">Stock: {stock}</li>
                         <li className="list-group-item">Precio: ${price}</li>
                         <li className="list-group-item">
-                            {/* Aplicando una clase de estilo en línea para darle color azul eléctrico */}
-                            <NavLink to={`/item/${id}`} style={{ color: '#007bff', textDecoration: 'none' }}>Ver detalle</NavLink>
+                            <NavLink to={`/item/${id}`} style={{ textDecoration: 'none' }}>
+                                <button className="btn btn-primary">
+                                    Ver detalle
+                                </button>
+                            </NavLink>
+                            
                         </li>
                     </ul>
                 </div>
