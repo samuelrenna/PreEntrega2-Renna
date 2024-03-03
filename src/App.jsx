@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from "./Components/footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
 import CartProvider from './context/CartContext';
-import CartWidget from './Components/CartWidget/CartWidget';
 
 function App() {
   return (
