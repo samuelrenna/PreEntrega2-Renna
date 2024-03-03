@@ -4,6 +4,13 @@ import { cartContext } from "../../context/CartContext";
 const CartItem = ({ id, name, quantity, price }) => {
     const { removeItem } = useContext(cartContext);
 
+    // Formatear el precio con puntos de miles
+    const formattedPrice = new Intl.NumberFormat("es-ES").format(price);
+    // Calcular el precio subtotal
+    const subtotal = price * quantity;
+    // Formatear el precio subtotal con puntos de miles
+    const formattedSubtotal = new Intl.NumberFormat("es-ES").format(subtotal);
+
     return (
         <div className="card mb-3">
             <div className="row g-0">
@@ -16,8 +23,8 @@ const CartItem = ({ id, name, quantity, price }) => {
                         <small className="text-body-secondary">
                             Cantidad Agregada: {quantity}
                         </small>
-                        <p className="card-text"> Precio unitario ${price}</p>
-                        <p className="card-text"> Precio Sub-Total $ {price*quantity}</p>
+                        <p className="card-text"> Precio unitario $ {formattedPrice}</p>
+                        <p className="card-text"> Precio Sub-Total $ {formattedSubtotal}</p>
                     </div>
                 </div>
             </div>
