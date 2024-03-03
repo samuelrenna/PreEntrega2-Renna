@@ -29,7 +29,6 @@ const Cart = () => {
                     </div>
                     <h3 className="mt-3">Total: ${total}</h3>
                     <div className="d-flex justify-content-center">
-
                         <div>
                             <button className="btn btn-danger me-3" onClick={() => clearCart()}>Remover todo</button>
                             <Link className="btn btn-primary" to="/checkout">Checkout</Link>
