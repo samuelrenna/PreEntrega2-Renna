@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
+
 const ItemDetail = ({ name, img, categoryUno, categoryDos, description, price, stock }) => {
     // Declara un componente funcional ItemDetail que recibe propiedades (name, img, categoryUno, categoryDos, description, price, stock).
     const [quantityAdded, setQuantityAdded] = useState(0); // Declara el estado quantityAdded y la función setQuantityAdded usando el hook useState, inicializado en 0.
@@ -13,7 +14,7 @@ const ItemDetail = ({ name, img, categoryUno, categoryDos, description, price, s
 
     return (
         <div className="container d-flex justify-content-center align-items-center">
-            <div className="card" style={{ width: '18rem', boxShadow: '0 4px 8px 0 #004091' }}>
+            <div className="card box-shadow-animation" style={{ width: '18rem'}}>
                 {quantityAdded > 0 ? ( // Verifica si la cantidad agregada es mayor que 0
                     <div className="card-body">
                         {/* Si es verdadero, muestra un div con la información del producto y la cantidad agregada */}
